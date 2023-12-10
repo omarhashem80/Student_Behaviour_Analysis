@@ -57,7 +57,7 @@ def eda():
         st.subheader('Comparison of College Marks and Categorical Features Across Departments')
         st.markdown(main.departments)
         for cat_col in cat_features:
-            st.plotly_chart(da.multivariate_analysis(cat_col, 'College Mark', 'Department'))
+            st.plotly_chart(da.multivariate_analysis('Department', 'College Mark', cat_col))
             st.write('Note:')
             lab = cat_col.replace(' ', '_').lower()
             st.markdown(main.formatted_data[lab])
